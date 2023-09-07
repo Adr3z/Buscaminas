@@ -272,6 +272,34 @@ static void test_annotate_large_minefield(void)
    free_annotation(actual, rows);
 }
 
+static void test_report(void)
+{
+    const char *minefield[] = {
+        "  ****  ",
+        " *    * ",
+        "* * ** *",
+        "* * ** *",
+        "* * ** *",
+        "* * ** *",  
+        " *    * ",
+        "  ****  ",
+    };
+    const char *expected[] = {
+        "12****21",
+        "2*4555*2",
+        "*5*4**5*",
+        "*6*6**6*",
+        "*6*6**6*",
+        "*5*4**5*",
+        "2*4555*2",
+        "12****21",
+    };
+    const size_t rows = ARRAY_SIZE(expected);
+    char **actual = annotate(minefield, rows);
+    TEST_ASSERT_EQUAL_STRING_ARRAY(expected, actual, rows);
+    free_annotation(actual, rows);
+}
+
 int main(void)
 {
    UnityBegin("test_minesweeper.c");
@@ -288,6 +316,7 @@ int main(void)
    RUN_TEST(test_annotate_vertical_line_mines_at_edges);
    RUN_TEST(test_annotate_cross);
    RUN_TEST(test_annotate_large_minefield);
+   RUN_TEST(test_report);
 
    return UnityEnd();
 }
