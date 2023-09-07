@@ -103,7 +103,7 @@ static void test_annotate_mine_surrounded_by_spaces(void)
 
 static void test_annotate_space_surrounded_by_mines(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *minefield[] = {
       // clang-format off
       "***",
