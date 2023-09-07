@@ -14,7 +14,7 @@ void tearDown(void)
 
 static void test_annotate_no_rows(void)
 {
-   TEST_IGNORE();   // delete this line to run test
+   //TEST_IGNORE();   // delete this line to run test
    const char **minefield = NULL;
    const size_t rows = 0;
    char **actual = annotate(minefield, rows);
