@@ -80,7 +80,7 @@ static void test_annotate_minefield_with_only_mines(void)
 
 static void test_annotate_mine_surrounded_by_spaces(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *minefield[] = {
       // clang-format off
       "   ",
