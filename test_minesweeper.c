@@ -245,7 +245,7 @@ static void test_annotate_cross(void)
 
 static void test_annotate_large_minefield(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *minefield[] = {
       // clang-format off
       " *  * ",
