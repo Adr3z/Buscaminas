@@ -126,7 +126,7 @@ static void test_annotate_space_surrounded_by_mines(void)
 
 static void test_annotate_horizontal_line(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *minefield[] = {
       // clang-format off
       " * * "

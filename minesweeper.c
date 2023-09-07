@@ -28,7 +28,7 @@ void change_board( const char **minefield, const size_t rows, char **annotate)
                 for( int k = 0; k < 8; k++){
                     int x = i + dx[k];
                     int y = j + dy[k];
-                    if( x >= 0 && (size_t)x < cols && y >= 0 && (size_t)y < rows && *(*(minefield + x) + y) == '*'){
+                    if( x >= 0 && (size_t)x < rows && y >= 0 && (size_t)y < cols && *(*(minefield + x) + y) == '*'){
                         count++;
                     }
                 }
