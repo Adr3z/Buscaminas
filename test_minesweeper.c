@@ -145,7 +145,7 @@ static void test_annotate_horizontal_line(void)
 
 static void test_annotate_horizontal_line_mines_at_edges(void)
 {
-   TEST_IGNORE();
+   //TEST_IGNORE();
    const char *minefield[] = {
       // clang-format off
       "*   *"
