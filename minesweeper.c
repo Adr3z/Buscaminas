@@ -11,7 +11,7 @@ char **create_board( const char **minefield, const size_t rows)
     char **annotate = (char**) malloc( rows * sizeof(char*));
     assert( annotate != NULL);
     for( size_t i = 0; i < rows; i++){
-        *(annotate + i) = (char*) malloc( strlen( *(minefield + i) + 1 ) * sizeof(char));
+        *(annotate + i) = (char*) malloc((strlen(*(minefield + i)) + 1) * sizeof(char));
         assert( *(annotate + i) != NULL);
         strcpy( *(annotate + i), *(minefield + i));
     }
